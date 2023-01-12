@@ -6,6 +6,15 @@ public class Student implements Comparable<Student> {
 	private String course;
 	private Integer grade;
 	
+	public Student(Integer studentID, String studentName, String course, Integer grade) {
+		super();
+		this.studentID = studentID;
+		this.studentName = studentName;
+		this.course = course;
+		this.grade = grade;
+	}
+
+	
 	public Integer getStudentID() {
 		return studentID;
 	}
