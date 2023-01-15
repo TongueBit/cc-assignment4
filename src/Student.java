@@ -39,9 +39,16 @@ public class Student implements Comparable<Student> {
 	public void setGrade(Integer grade) {
 		this.grade = grade;
 	}
+	
 	@Override
-	public int compareTo(Student o) {
-		// TODO Auto-generated method stub
-		return 0;
+	public int compareTo(Student that) {
+		
+		if (this.grade > that.grade)
+			return -1;
+		else if (this.grade.equals(that.grade))
+			return 0;
+		else
+			return 1;
 	}
+		
 }
