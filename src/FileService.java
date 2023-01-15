@@ -1,4 +1,3 @@
-import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
@@ -28,10 +27,23 @@ public class FileService {
 			return students;
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
 		}
 		return null;
+	}
+	
+	public void writeFileData(Student student, String file) {
+
+		try (FileWriter fileWriter = new FileWriter(file, true)) {
+			  fileWriter.write(student.getStudentID() + "," + student.getStudentName() + "," +
+			  student.getCourse() + "," + student.getGrade() + "\n");
+			  
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 }
 

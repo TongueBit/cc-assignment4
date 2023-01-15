@@ -1,5 +1,5 @@
 
-public class Student implements Comparable<Student> {
+public class Student implements Comparable<Student>{
 
 	private Integer studentID;
 	private String studentName;
